@@ -7,103 +7,71 @@
 //
 
 import UIKit
-import Firebase
 import Kingfisher
-
 
 class AnimalBioController: UITableViewController {
     
-    var ingredients = [String]() {
+    var animal: Animal? {
         didSet{
+            
+            if let avatar = animal?.avatar {
+                let url = URL(string: avatar)
+                avatarImageView.kf.setImage(with: url)
+            }
+            
             tableView.reloadData()
         }
     }
     
-    let nutritionImageView = UIImageView()
-    var passedImage: UIImage?
-    var mealString : String?
+    let cellId = "cellId"
+    
+    private let avatarImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.setHidesBackButton(true, animated: true)
-        
         setupViews()
-        
-        let userRef = Database.database().reference().child("users").child((Auth.auth().currentUser?.uid)!)
-        userRef.observeSingleEvent(of: .value, with: {(userSnapshot) in
-            
-            
-            let userDictionary = userSnapshot.value as! [String : Any]
-            let bmiClass = userDictionary["userClass"] as! Int
-            
-            // get date when user started
-            let startDateStr = userDictionary["startDate"] as! String
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
-            guard let startDate = dateFormatter.date(from: startDateStr) else { return }
-            
-            // find difference between today and startDate
-            let cal = Calendar.current
-            let dateDifferenceComp = cal.dateComponents([.day], from: startDate, to: Date())
-            guard let dayDifference = dateDifferenceComp.day else { return }
-            
-            //TODO:
-            // add user property t
-            
-            let ref = Database.database().reference().child("nutritions").child(String(bmiClass)).child("day\(dayDifference % 7)") //.child("breakfast")
-            
-            //знак процента это modulo короч помогает сделать луп для дней чтобы подгружать другие рецепты дня. позже для 28 дней будет % 28 а в firebase когда day28 ты should вставить day0
-            
-            ref.observeSingleEvent(of: .value, with: {(mealSnapshot) in
-                guard let day = mealSnapshot.value as? [String : Any] else {return}
-                
-                //nur
-                guard let mealString = self.mealString else{return}
-                if let meal = day[mealString.lowercased()] as? [String: Any],
-                    let ingredientsStr = meal["ingredients"] as? String,
-                    let imageString = meal["poster"] as? String{
-                    
-                    self.ingredients = ingredientsStr.components(separatedBy: ",")
-                    let url = URL(string: imageString)
-                    
-                    self.nutritionImageView.kf.setImage(with: url)
-                }
-                
-                
-            })
-            
-        })
-        
-        
-        
     }
     
-    let ingedientCellId = "ingedientCellId"
-    
     func setupViews(){
+
+        self.tableView.backgroundColor = .white
+        self.tableView.register(AnimalBioCell.self, forCellReuseIdentifier: cellId)
         
-        view.backgroundColor = .white
+        avatarImageView.frame = CGRect(x: 0, y: 0, width: Constant.screenWidth, height: Constant.screenWidth)
+        tableView.tableHeaderView = avatarImageView
         
-        
-        //nutritionImageView.image = //passedImage ?? UIImage(named: "placeholder")
-        
-        nutritionImageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3)
-        
-        tableView.tableHeaderView = nutritionImageView
-        tableView.backgroundColor = .white
-        tableView.register(IngredientCell.self, forCellReuseIdentifier: ingedientCellId)
         tableView.estimatedRowHeight = 54
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ingredients.count
+        return 2
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ingedientCellId) as! IngredientCell
-        cell.textLabel?.text = ingredients[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        switch indexPath.row {
+        case 0:
+            if let firstName = animal?.firstName, let lastName = animal?.lastName {
+                cell.textLabel?.text = "\(firstName) \(lastName)"
+                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+            }
+        case 1:
+            if let bio = animal?.bio {
+                cell.textLabel?.text = "\(bio)"
+                cell.textLabel?.numberOfLines = 0
+            }
+        default:
+            print("extra cell appeared?")
+        }
+        
         return cell
     }
     

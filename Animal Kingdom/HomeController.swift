@@ -7,15 +7,17 @@
 //
 
 import UIKit
-import Reusable
+import Kingfisher
 
-class HomeController: UICollectionViewController {
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private var animals = [Animal]() {
         didSet{
             self.collectionView?.reloadData()
         }
     }
+    
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +27,17 @@ class HomeController: UICollectionViewController {
     }
     
     func setupViews(){
+        
+        self.title = "Animal Kingdom"
+        
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.backgroundColor = .clear
-        collectionView?.register(cellType: AnimalCell.self)
+        collectionView?.register(AnimalCell.self, forCellWithReuseIdentifier: cellId)
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        self.navigationItem.backBarButtonItem = backItem
+        
     }
     
     
@@ -44,50 +54,32 @@ class HomeController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: AnimalCell.self)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AnimalCell
+        let animal = animals[indexPath.item]
         
-//        let message = messages[(indexPath as NSIndexPath).item]
-//        
-//        cell.message = message
-//        
-//        cell.textView.text = message.text
-//        
-//        setupCell(cell, message: message)
-//        
-//        if let text = message.text {
-//            //a text message
-//            cell.bubbleWidthAnchor?.constant = estimateFrameForText(text).width + 32
-//            cell.textView.isHidden = false
-//        } else if message.imageUrl != nil {
-//            //fall in here if its an image message
-//            cell.bubbleWidthAnchor?.constant = 200
-//            cell.textView.isHidden = true
-//        }
-//        
-//        cell.playButton.isHidden = message.videoUrl == nil
+        let url = URL(string: animal.avatar )
+        cell.avatarImageView.kf.setImage(with: url)
         
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-//        var height: CGFloat = 80
-//        
-//        let message = messages[(indexPath as NSIndexPath).item]
-//        if let text = message.text {
-//            height = estimateFrameForText(text).height + 20
-//        } else if let imageWidth = message.imageWidth?.floatValue, let imageHeight = message.imageHeight?.floatValue {
-//            
-//            // h1 / w1 = h2 / w2
-//            // solve for h1
-//            // h1 = h2 / w2 * w1
-//            
-//            height = CGFloat(imageHeight / imageWidth * 200)
-//            
-//        }
-//        
-//        let width = UIScreen.main.bounds.width
-        return CGSize(width: 50, height: 50)
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constant.screenWidth/2 - 5, height: Constant.screenWidth/2 - 5)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let animalBioController = AnimalBioController()
+        
+        let animal = animals[indexPath.item]
+        animalBioController.animal = animal
+        animalBioController.title = animal.title
+        
+        
+        self.navigationController?.pushViewController(animalBioController, animated: true)
+    }
+
     
 
 }

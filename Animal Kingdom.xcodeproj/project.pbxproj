@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		7C1C51E31F3CD2E1007D4829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */; };
-		7C1C51E51F3CD2E1007D4829 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51E41F3CD2E1007D4829 /* ViewController.swift */; };
-		7C1C51E81F3CD2E1007D4829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51E61F3CD2E1007D4829 /* Main.storyboard */; };
+		7C1C51E51F3CD2E1007D4829 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51E41F3CD2E1007D4829 /* HomeController.swift */; };
 		7C1C51EA1F3CD2E1007D4829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */; };
 		7C1C51ED1F3CD2E1007D4829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51EB1F3CD2E1007D4829 /* LaunchScreen.storyboard */; };
+		7C1C51F51F3CD8E2007D4829 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51F41F3CD8E2007D4829 /* GoogleService-Info.plist */; };
+		7C1C51FB1F3CD996007D4829 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FA1F3CD996007D4829 /* Animal.swift */; };
+		7C1C51FD1F3CDF7B007D4829 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */; };
+		7C1C51FF1F3CE7AD007D4829 /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */; };
+		7C1C52011F3CEF77007D4829 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52001F3CEF77007D4829 /* Constant.swift */; };
+		7C1C52031F3CF8F4007D4829 /* AnimalBioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52021F3CF8F4007D4829 /* AnimalBioController.swift */; };
+		7C1C52071F3D0678007D4829 /* AnimalBioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */; };
+		F3D834181EDBF1E42E09A7BF /* Pods_Animal_Kingdom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19D39C30467C16C6EB5C471 /* Pods_Animal_Kingdom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14B905C143FA0C53049E745E /* Pods-Animal Kingdom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal Kingdom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom.release.xcconfig"; sourceTree = "<group>"; };
 		7C1C51DF1F3CD2E1007D4829 /* Animal Kingdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal Kingdom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C1C51E41F3CD2E1007D4829 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C1C51E71F3CD2E1007D4829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C1C51E41F3CD2E1007D4829 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C1C51EC1F3CD2E1007D4829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C1C51EE1F3CD2E1007D4829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1C51F41F3CD8E2007D4829 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C1C51FA1F3CD996007D4829 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
+		7C1C52001F3CEF77007D4829 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7C1C52021F3CF8F4007D4829 /* AnimalBioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalBioController.swift; sourceTree = "<group>"; };
+		7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalBioCell.swift; sourceTree = "<group>"; };
+		B8C3216DA17D58263F013BEE /* Pods-Animal Kingdom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal Kingdom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom.debug.xcconfig"; sourceTree = "<group>"; };
+		D19D39C30467C16C6EB5C471 /* Pods_Animal_Kingdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animal_Kingdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D834181EDBF1E42E09A7BF /* Pods_Animal_Kingdom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +57,8 @@
 			children = (
 				7C1C51E11F3CD2E1007D4829 /* Animal Kingdom */,
 				7C1C51E01F3CD2E1007D4829 /* Products */,
+				C22941A3FAFAEA37B205CBC4 /* Pods */,
+				AFEDCAAAA4340506E39E3436 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,69 @@
 		7C1C51E11F3CD2E1007D4829 /* Animal Kingdom */ = {
 			isa = PBXGroup;
 			children = (
-				7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */,
-				7C1C51E41F3CD2E1007D4829 /* ViewController.swift */,
-				7C1C51E61F3CD2E1007D4829 /* Main.storyboard */,
-				7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */,
-				7C1C51EB1F3CD2E1007D4829 /* LaunchScreen.storyboard */,
-				7C1C51EE1F3CD2E1007D4829 /* Info.plist */,
+				7C1C51F61F3CD8F4007D4829 /* Controller */,
+				7C1C51F81F3CD914007D4829 /* View */,
+				7C1C51F71F3CD8FF007D4829 /* Model */,
+				7C1C51F91F3CD966007D4829 /* Assets */,
 			);
 			path = "Animal Kingdom";
+			sourceTree = "<group>";
+		};
+		7C1C51F61F3CD8F4007D4829 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */,
+				7C1C51E41F3CD2E1007D4829 /* HomeController.swift */,
+				7C1C52021F3CF8F4007D4829 /* AnimalBioController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C1C51F71F3CD8FF007D4829 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C1C51FA1F3CD996007D4829 /* Animal.swift */,
+				7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */,
+				7C1C52001F3CEF77007D4829 /* Constant.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C1C51F81F3CD914007D4829 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */,
+				7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C1C51F91F3CD966007D4829 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */,
+				7C1C51EB1F3CD2E1007D4829 /* LaunchScreen.storyboard */,
+				7C1C51F41F3CD8E2007D4829 /* GoogleService-Info.plist */,
+				7C1C51EE1F3CD2E1007D4829 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		AFEDCAAAA4340506E39E3436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D19D39C30467C16C6EB5C471 /* Pods_Animal_Kingdom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C22941A3FAFAEA37B205CBC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8C3216DA17D58263F013BEE /* Pods-Animal Kingdom.debug.xcconfig */,
+				14B905C143FA0C53049E745E /* Pods-Animal Kingdom.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C1C51F11F3CD2E1007D4829 /* Build configuration list for PBXNativeTarget "Animal Kingdom" */;
 			buildPhases = (
+				3ED21A008EAB7DDBE610F807 /* [CP] Check Pods Manifest.lock */,
 				7C1C51DB1F3CD2E1007D4829 /* Sources */,
 				7C1C51DC1F3CD2E1007D4829 /* Frameworks */,
 				7C1C51DD1F3CD2E1007D4829 /* Resources */,
+				1797FB323DF8375DD3B178EE /* [CP] Embed Pods Frameworks */,
+				A832E5EB894777A57959BEFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,33 +203,79 @@
 			files = (
 				7C1C51ED1F3CD2E1007D4829 /* LaunchScreen.storyboard in Resources */,
 				7C1C51EA1F3CD2E1007D4829 /* Assets.xcassets in Resources */,
-				7C1C51E81F3CD2E1007D4829 /* Main.storyboard in Resources */,
+				7C1C51F51F3CD8E2007D4829 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1797FB323DF8375DD3B178EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ED21A008EAB7DDBE610F807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A832E5EB894777A57959BEFC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C1C51DB1F3CD2E1007D4829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1C51E51F3CD2E1007D4829 /* ViewController.swift in Sources */,
+				7C1C51E51F3CD2E1007D4829 /* HomeController.swift in Sources */,
+				7C1C51FF1F3CE7AD007D4829 /* AnimalManager.swift in Sources */,
+				7C1C52071F3D0678007D4829 /* AnimalBioCell.swift in Sources */,
+				7C1C51FD1F3CDF7B007D4829 /* AnimalCell.swift in Sources */,
 				7C1C51E31F3CD2E1007D4829 /* AppDelegate.swift in Sources */,
+				7C1C52031F3CF8F4007D4829 /* AnimalBioController.swift in Sources */,
+				7C1C51FB1F3CD996007D4829 /* Animal.swift in Sources */,
+				7C1C52011F3CEF77007D4829 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C1C51E61F3CD2E1007D4829 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C1C51E71F3CD2E1007D4829 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C1C51EB1F3CD2E1007D4829 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -259,12 +382,13 @@
 		};
 		7C1C51F21F3CD2E1007D4829 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C3216DA17D58263F013BEE /* Pods-Animal Kingdom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27W5LD33EA;
 				INFOPLIST_FILE = "Animal Kingdom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-nurios.Animal-Kingdom";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.animalKingdom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +396,13 @@
 		};
 		7C1C51F31F3CD2E1007D4829 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B905C143FA0C53049E745E /* Pods-Animal Kingdom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27W5LD33EA;
 				INFOPLIST_FILE = "Animal Kingdom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-nurios.Animal-Kingdom";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.animalKingdom";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +427,7 @@
 				7C1C51F31F3CD2E1007D4829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
