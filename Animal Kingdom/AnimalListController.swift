@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class AnimalListController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private var animals = [Animal]() {
         didSet{
@@ -56,10 +56,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AnimalCell
         let animal = animals[indexPath.item]
         
-        let url = URL(string: animal.avatar )
+        if let url = URL(string: animal.avatar ) {
+            cell.avatarImageView.downloadImage(from: url)
+        } else {
+            cell.avatarImageView.image = UIImage()
+        }
         
-        //FIXME: replace kingfisher
-//        cell.avatarImageView.kf.setImage(with: url)
         
         return cell
     }

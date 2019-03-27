@@ -14,9 +14,9 @@ class AnimalBioController: UITableViewController {
         didSet{
             
             if let avatar = animal?.avatar {
-                let url = URL(string: avatar)
-                //FIXME: replace kingfisher
-//                avatarImageView.kf.setImage(with: url)
+                if let url = URL(string: avatar) {
+                    avatarImageView.downloadImage(from: url)
+                }
             }
             
             tableView.reloadData()

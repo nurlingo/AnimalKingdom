@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        window?.rootViewController = UINavigationController(rootViewController: AnimalListController(collectionViewLayout: layout))
         return true
     }
 
