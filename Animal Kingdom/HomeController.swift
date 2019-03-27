@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -58,7 +57,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let animal = animals[indexPath.item]
         
         let url = URL(string: animal.avatar )
-        cell.avatarImageView.kf.setImage(with: url)
+        
+        //FIXME: replace kingfisher
+//        cell.avatarImageView.kf.setImage(with: url)
         
         return cell
     }

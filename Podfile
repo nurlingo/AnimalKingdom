@@ -6,7 +6,6 @@ target 'Animal Kingdom' do
   use_frameworks!
 
   # Pods for Animal Kingdom
-  pod "Kingfisher"
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'SVProgressHUD'

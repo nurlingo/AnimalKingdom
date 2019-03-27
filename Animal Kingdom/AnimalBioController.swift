@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class AnimalBioController: UITableViewController {
     
@@ -16,7 +15,8 @@ class AnimalBioController: UITableViewController {
             
             if let avatar = animal?.avatar {
                 let url = URL(string: avatar)
-                avatarImageView.kf.setImage(with: url)
+                //FIXME: replace kingfisher
+//                avatarImageView.kf.setImage(with: url)
             }
             
             tableView.reloadData()
@@ -45,7 +45,7 @@ class AnimalBioController: UITableViewController {
         tableView.tableHeaderView = avatarImageView
         
         tableView.estimatedRowHeight = 54
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
     

@@ -17,7 +17,7 @@ class AnimalManager {
         SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.show()
         
-        let addressesRef = FIRDatabase.database().reference().child("animals")
+        let addressesRef = Database.database().reference().child("animals")
         addressesRef.observeSingleEvent(of: .value, with: { (snapshot) in
 
             if let result = snapshot.value as? NSArray{
