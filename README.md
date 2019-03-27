@@ -4,8 +4,7 @@ The app was implemented as a homework for a potential employer.
 
 The task was to create the "Animal Kingdom" iOS application using provided JSON file. The app allows the user to browse and learn more about the animals. 
 
-It was up to me how I accomplish this task and how the information is to be displayed.
-The submission was be judged based on code quality, creativity, and the final product. 
+It was up to me how I accomplish this task and how to display the information.
 
 Below are the specs as provided by the client:
 
