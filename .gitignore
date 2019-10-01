@@ -2,4 +2,5 @@
 .DS_Store
 Podfile.lock
 Pods/
-Animal\ Kingdom.xcworkspace/xcshareddata/
+Animal\ Kingdom.xcworkspace
+Animal Kingdom.xcodeproj/xcuserdata
