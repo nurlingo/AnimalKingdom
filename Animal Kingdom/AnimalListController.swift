@@ -10,12 +10,7 @@ import UIKit
 
 class AnimalListController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    private var animals = [Animal]() {
-        didSet{
-            self.collectionView?.reloadData()
-        }
-    }
-    
+    var animalViewModels = [AnimalViewModel]()
     let cellId = "cellId"
     
     override func viewDidLoad() {
@@ -41,27 +36,25 @@ class AnimalListController: UICollectionViewController, UICollectionViewDelegate
     
     
     func fetchAnimals() {
-        AnimalManager.fetchAnimals { (success, error, list) in
+        Service.fetchAnimals { [weak self] (success, error, list) in
             if success && list != nil {
-                self.animals = list!
+                self?.animalViewModels = list!.map({return AnimalViewModel(animal: $0)})
+        
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
             }
         }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return animals.count
+        return animalViewModels.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AnimalCell
-        let animal = animals[indexPath.item]
-        
-        if let url = URL(string: animal.avatar ) {
-            cell.avatarImageView.downloadImage(from: url)
-        } else {
-            cell.avatarImageView.image = UIImage()
-        }
-        
+        cell.animalViewModel = animalViewModels[indexPath.item]
         
         return cell
     }
@@ -75,11 +68,8 @@ class AnimalListController: UICollectionViewController, UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let animalBioController = AnimalBioController()
         
-        let animal = animals[indexPath.item]
-        animalBioController.animal = animal
-        animalBioController.title = animal.title
-        
-        
+        let animalVM = animalViewModels[indexPath.item]
+        animalBioController.animalViewModel = animalVM
         self.navigationController?.pushViewController(animalBioController, animated: true)
     }
 

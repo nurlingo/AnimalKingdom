@@ -10,18 +10,7 @@ import UIKit
 
 class AnimalBioController: UITableViewController {
     
-    var animal: Animal? {
-        didSet{
-            
-            if let avatar = animal?.avatar {
-                if let url = URL(string: avatar) {
-                    avatarImageView.downloadImage(from: url)
-                }
-            }
-            
-            tableView.reloadData()
-        }
-    }
+    var animalViewModel: AnimalViewModel!
     
     let cellId = "cellId"
     
@@ -34,6 +23,23 @@ class AnimalBioController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        
+        let imageCompletionClosure = { ( imageData: NSData ) -> Void in
+            
+                    DispatchQueue.main.async {
+                        UIView.animate(withDuration: 1.0, animations: {
+                            self.avatarImageView.alpha = 1.0
+                            self.avatarImageView.image = UIImage(data: imageData as Data)
+                            self.view.setNeedsDisplay()
+                        })
+                    }
+        }
+        
+        animalViewModel.download(completionHanlder: imageCompletionClosure)
+        self.title = animalViewModel.title
+        
+        
+        
     }
     
     func setupViews(){
@@ -59,23 +65,16 @@ class AnimalBioController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            if let firstName = animal?.firstName, let lastName = animal?.lastName {
-                cell.textLabel?.text = "\(firstName) \(lastName)"
-                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-            }
+            cell.textLabel?.text = animalViewModel?.name
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         case 1:
-            if let bio = animal?.bio {
-                cell.textLabel?.text = "\(bio)"
-                cell.textLabel?.numberOfLines = 0
-            }
+            cell.textLabel?.text = animalViewModel?.bio
+            cell.textLabel?.numberOfLines = 0
         default:
             print("extra cell appeared?")
         }
         
         return cell
     }
-    
-    
-    
     
 }

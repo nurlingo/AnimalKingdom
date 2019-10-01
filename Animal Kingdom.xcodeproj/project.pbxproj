@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CED8E0A23435878005E6AEE /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CED8E0923435878005E6AEE /* AnimalViewModel.swift */; };
 		7C1C51E31F3CD2E1007D4829 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */; };
 		7C1C51E51F3CD2E1007D4829 /* AnimalListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51E41F3CD2E1007D4829 /* AnimalListController.swift */; };
 		7C1C51EA1F3CD2E1007D4829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */; };
@@ -14,17 +15,17 @@
 		7C1C51F51F3CD8E2007D4829 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1C51F41F3CD8E2007D4829 /* GoogleService-Info.plist */; };
 		7C1C51FB1F3CD996007D4829 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FA1F3CD996007D4829 /* Animal.swift */; };
 		7C1C51FD1F3CDF7B007D4829 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */; };
-		7C1C51FF1F3CE7AD007D4829 /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */; };
 		7C1C52011F3CEF77007D4829 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52001F3CEF77007D4829 /* Constant.swift */; };
 		7C1C52031F3CF8F4007D4829 /* AnimalBioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52021F3CF8F4007D4829 /* AnimalBioController.swift */; };
 		7C1C52071F3D0678007D4829 /* AnimalBioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */; };
-		7C5EE30F224B831700FE40CF /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EE30E224B831700FE40CF /* UIImageView+.swift */; };
+		7C5EE30F224B831700FE40CF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5EE30E224B831700FE40CF /* Service.swift */; };
 		F3D834181EDBF1E42E09A7BF /* Pods_Animal_Kingdom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19D39C30467C16C6EB5C471 /* Pods_Animal_Kingdom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14B905C143FA0C53049E745E /* Pods-Animal Kingdom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal Kingdom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom.release.xcconfig"; sourceTree = "<group>"; };
-		7C1C51DF1F3CD2E1007D4829 /* Animal Kingdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal Kingdom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CED8E0923435878005E6AEE /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
+		7C1C51DF1F3CD2E1007D4829 /* Akingdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Akingdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1C51E21F3CD2E1007D4829 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C1C51E41F3CD2E1007D4829 /* AnimalListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListController.swift; sourceTree = "<group>"; };
 		7C1C51E91F3CD2E1007D4829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,11 +34,10 @@
 		7C1C51F41F3CD8E2007D4829 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C1C51FA1F3CD996007D4829 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
-		7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
 		7C1C52001F3CEF77007D4829 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7C1C52021F3CF8F4007D4829 /* AnimalBioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalBioController.swift; sourceTree = "<group>"; };
 		7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalBioCell.swift; sourceTree = "<group>"; };
-		7C5EE30E224B831700FE40CF /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		7C5EE30E224B831700FE40CF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B8C3216DA17D58263F013BEE /* Pods-Animal Kingdom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal Kingdom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom.debug.xcconfig"; sourceTree = "<group>"; };
 		D19D39C30467C16C6EB5C471 /* Pods_Animal_Kingdom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animal_Kingdom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,7 +67,7 @@
 		7C1C51E01F3CD2E1007D4829 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7C1C51DF1F3CD2E1007D4829 /* Animal Kingdom.app */,
+				7C1C51DF1F3CD2E1007D4829 /* Akingdom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 				7C1C51F61F3CD8F4007D4829 /* Controller */,
 				7C1C51F81F3CD914007D4829 /* View */,
 				7C1C51F71F3CD8FF007D4829 /* Model */,
-				7C5EE30D224B82FC00FE40CF /* Extensions */,
+				7C5EE30D224B82FC00FE40CF /* Service */,
 				7C1C51F91F3CD966007D4829 /* Assets */,
 			);
 			path = "Animal Kingdom";
@@ -98,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				7C1C51FA1F3CD996007D4829 /* Animal.swift */,
-				7C1C51FE1F3CE7AD007D4829 /* AnimalManager.swift */,
 				7C1C52001F3CEF77007D4829 /* Constant.swift */,
 			);
 			name = Model;
@@ -108,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1C51FC1F3CDF7B007D4829 /* AnimalCell.swift */,
+				5CED8E0923435878005E6AEE /* AnimalViewModel.swift */,
 				7C1C52061F3D0678007D4829 /* AnimalBioCell.swift */,
 			);
 			name = View;
@@ -124,12 +124,12 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		7C5EE30D224B82FC00FE40CF /* Extensions */ = {
+		7C5EE30D224B82FC00FE40CF /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7C5EE30E224B831700FE40CF /* UIImageView+.swift */,
+				7C5EE30E224B831700FE40CF /* Service.swift */,
 			);
-			name = Extensions;
+			name = Service;
 			sourceTree = "<group>";
 		};
 		AFEDCAAAA4340506E39E3436 /* Frameworks */ = {
@@ -161,7 +161,6 @@
 				7C1C51DC1F3CD2E1007D4829 /* Frameworks */,
 				7C1C51DD1F3CD2E1007D4829 /* Resources */,
 				1797FB323DF8375DD3B178EE /* [CP] Embed Pods Frameworks */,
-				A832E5EB894777A57959BEFC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,7 +168,7 @@
 			);
 			name = "Animal Kingdom";
 			productName = "Animal Kingdom";
-			productReference = 7C1C51DF1F3CD2E1007D4829 /* Animal Kingdom.app */;
+			productReference = 7C1C51DF1F3CD2E1007D4829 /* Akingdom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -179,20 +178,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Nursultan Askarbekuly";
 				TargetAttributes = {
 					7C1C51DE1F3CD2E1007D4829 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 27W5LD33EA;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 7C1C51DA1F3CD2E1007D4829 /* Build configuration list for PBXProject "Animal Kingdom" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -228,7 +227,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -243,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3ED21A008EAB7DDBE610F807 /* [CP] Check Pods Manifest.lock */ = {
@@ -264,21 +263,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A832E5EB894777A57959BEFC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Animal Kingdom/Pods-Animal Kingdom-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -286,14 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5EE30F224B831700FE40CF /* UIImageView+.swift in Sources */,
+				7C5EE30F224B831700FE40CF /* Service.swift in Sources */,
 				7C1C51E51F3CD2E1007D4829 /* AnimalListController.swift in Sources */,
-				7C1C51FF1F3CE7AD007D4829 /* AnimalManager.swift in Sources */,
 				7C1C52071F3D0678007D4829 /* AnimalBioCell.swift in Sources */,
 				7C1C51FD1F3CDF7B007D4829 /* AnimalCell.swift in Sources */,
 				7C1C51E31F3CD2E1007D4829 /* AppDelegate.swift in Sources */,
 				7C1C52031F3CF8F4007D4829 /* AnimalBioController.swift in Sources */,
 				7C1C51FB1F3CD996007D4829 /* Animal.swift in Sources */,
+				5CED8E0A23435878005E6AEE /* AnimalViewModel.swift in Sources */,
 				7C1C52011F3CEF77007D4829 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,21 +300,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -366,21 +359,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -414,9 +416,9 @@
 				INFOPLIST_FILE = "Animal Kingdom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-com.animalKingdom";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Akingdom;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -429,9 +431,9 @@
 				INFOPLIST_FILE = "Animal Kingdom/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-com.animalKingdom";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Akingdom;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
