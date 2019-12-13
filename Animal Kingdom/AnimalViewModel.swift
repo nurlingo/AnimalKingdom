@@ -26,8 +26,8 @@ class AnimalViewModel {
         self.imageURL = URL(string: animal.avatar)!
     }
     
-    func download(completionHanlder: @escaping ImageDownloadCompletionClosure) {
-        Service.download(url: imageURL, completionHanlder: completionHanlder)
+    func download(handler: @escaping ImageDownloadHandler) {
+        Service.download(url: imageURL, handler: handler)
     }
     
 }

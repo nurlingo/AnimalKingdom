@@ -34,15 +34,16 @@ class AnimalListController: UICollectionViewController, UICollectionViewDelegate
         
     }
     
-    
     func fetchAnimals() {
-        Service.fetchAnimals { [weak self] (success, error, list) in
-            if success && list != nil {
-                self?.animalViewModels = list!.map({return AnimalViewModel(animal: $0)})
-        
+        Service.fetchAnimals { [weak self] (res) in
+            switch res {
+            case .success(let animals):
+                self?.animalViewModels = animals.map({return AnimalViewModel(animal: $0)})
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()
                 }
+            case .failure(let err):
+                print("Failed to fetch animals", err)
             }
         }
     }

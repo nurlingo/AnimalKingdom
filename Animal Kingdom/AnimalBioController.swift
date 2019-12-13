@@ -24,22 +24,16 @@ class AnimalBioController: UITableViewController {
         super.viewDidLoad()
         setupViews()
         
-        let imageCompletionClosure = { ( imageData: NSData ) -> Void in
-            
-                    DispatchQueue.main.async {
-                        UIView.animate(withDuration: 1.0, animations: {
-                            self.avatarImageView.alpha = 1.0
-                            self.avatarImageView.image = UIImage(data: imageData as Data)
-                            self.view.setNeedsDisplay()
-                        })
-                    }
+        animalViewModel.download { (res) in
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 1.0, animations: {
+                    self.avatarImageView.alpha = 1.0
+                    self.avatarImageView.image = UIImage(data: try! res.get() as Data)
+                    self.view.setNeedsDisplay()
+                })
+            }
         }
-        
-        animalViewModel.download(completionHanlder: imageCompletionClosure)
         self.title = animalViewModel.title
-        
-        
-        
     }
     
     func setupViews(){

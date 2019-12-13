@@ -13,7 +13,7 @@ class AnimalCell: UICollectionViewCell {
     var animalViewModel: AnimalViewModel! {
         didSet {
             titleLabel.text = animalViewModel.title
-            animalViewModel.download(completionHanlder: imageCompletionClosure!)
+            animalViewModel.download(handler: imageDownloadHandler!)
         }
     }
     
@@ -56,22 +56,22 @@ class AnimalCell: UICollectionViewCell {
         titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
-    var imageCompletionClosure: ImageDownloadCompletionClosure?
+    var imageDownloadHandler: ImageDownloadHandler!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
         updateViewConstraints()
         
-        imageCompletionClosure = { ( imageData: NSData ) -> Void in
+        imageDownloadHandler = { ( res: Result<NSData,Error> ) -> () in
                     
-                    DispatchQueue.main.async {
-                        UIView.animate(withDuration: 1.0, animations: {
-                            self.avatarImageView.alpha = 1.0
-                            self.avatarImageView.image = UIImage(data: imageData as Data)
-                        })
-                    }
-            
+            let data = try! res.get()
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 1.0, animations: {
+                    self.avatarImageView.alpha = 1.0
+                    self.avatarImageView.image = UIImage(data: data as Data)
+                })
+            }
         }
     }
     

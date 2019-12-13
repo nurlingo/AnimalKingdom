@@ -10,11 +10,11 @@ import UIKit
 import FirebaseDatabase
 import SVProgressHUD
 
-public typealias ImageDownloadCompletionClosure = (_ imageData: NSData ) -> Void
+public typealias ImageDownloadHandler = (Result<NSData, Error>) -> ()
 
 struct Service {
     
-    static func fetchAnimals(_ completion:  @escaping (Bool, String?,[Animal]?) -> Void) {
+    static func fetchAnimals(_ completion:  @escaping (Result<[Animal], Error>) -> Void) {
         
         SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.show()
@@ -24,7 +24,7 @@ struct Service {
 
             if let result = snapshot.value as? NSArray{
                 
-                var array = [Animal]()
+                var animalsArray = [Animal]()
                 
                 for item in result {
                     if let item = item as? [String:Any]{
@@ -32,12 +32,12 @@ struct Service {
                             print("serialization failed: ", item["firstName"] ?? "no such file")
                             continue
                         }
-                        array.append(animal)
+                        animalsArray.append(animal)
                     }
                 }
-                completion(true, nil, array)
+                completion(.success(animalsArray))
             } else {
-                completion(false, "couldn't form dictionary", nil)
+                completion(.failure(NSError(domain: "Service: Fetch animals", code: 1, userInfo: nil)))
             }
         
             SVProgressHUD.dismiss()
@@ -47,7 +47,7 @@ struct Service {
         
     }
     
-    static func download(url: URL, completionHanlder: @escaping ImageDownloadCompletionClosure) {
+    static func download(url: URL, handler: @escaping ImageDownloadHandler) {
         
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
@@ -55,15 +55,19 @@ struct Service {
         
         let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
             
-            if let tempLocalUrl = tempLocalUrl, error == nil {
-                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-                    let rawImageData = NSData(contentsOf: tempLocalUrl)
-                    completionHanlder(rawImageData!)
-                    print("Successfully downloaded. Status code: \(statusCode)")
-                }
-            } else {
-                print("Error took place while downloading a file. Error description: \(String(describing: error?.localizedDescription))")
+            if error != nil {
+                handler(.failure(error!))
+                print("Error downloading an image: ", error!)
             }
+            
+            guard let localUrl = tempLocalUrl else {
+                handler(.failure(NSError()))
+                return
+            }
+            
+            let rawImageData = NSData(contentsOf: localUrl)
+            handler(.success(rawImageData!))
+                
         }
         
         task.resume()
